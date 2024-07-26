@@ -1,0 +1,178 @@
+/* Reset de margens e preenchimentos padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Tw Cen MT';
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Garante que o body e o html ocupem 100% da altura da tela */
+    width: 100%; /* Garante que o body e o html ocupem 100% da largura da tela */
+    overflow-x: hidden; /* Evita rolagem horizontal */
+}
+
+/* Estilização básica do header */
+header {
+    background-color: #1d2329e5; /* Cor de fundo do header com transparência */
+    color: #ffffff; /* Cor do texto no header */
+    padding: 10px 0; /* Espaçamento interno do header */
+    width: 100%; /* Garante que o header ocupe toda a largura da tela */
+    position: fixed; /* Fixa o header na parte superior da página */
+    top: 0; /* Posiciona o header no topo */
+    z-index: 1000; /* Define a ordem de empilhamento (pode ser ajustado conforme necessário) */
+}
+
+.container {
+    display: flex; /* Usa flexbox para alinhar itens na mesma linha */
+    align-items: center; /* Alinha itens verticalmente no centro */
+    justify-content: space-between; /* Alinha itens com espaço entre eles */
+    padding: 0 20px; /* Espaçamento interno para os lados */
+}
+
+/* Estilo para a logo */
+.logo {
+    height: 40px; /* Ajusta a altura da logo conforme necessário */
+}
+
+/* Estilo para a navegação */
+.menu-nav {
+    display: flex; /* Usa flexbox para alinhar os links na mesma linha */
+}
+
+.menu-nav a {
+    color: #ffffff; /* Cor dos links no header */
+    text-decoration: none; /* Remove sublinhado dos links */
+    padding: 10px 15px; /* Espaçamento interno dos links */
+}
+
+/* Estilo de hover para os links no header */
+.menu-nav a:hover {
+    background-color: #444; /* Cor de fundo ao passar o mouse sobre os links */
+    border-radius: 7px; /* Borda arredondada nos links ao passar o mouse */
+}
+
+/* Estilização básica para o conteúdo principal (main) */
+main {
+    padding: 0; /* Remove espaçamento interno do conteúdo principal */
+    margin: 0; /* Remove qualquer margem que possa estar afetando */
+}
+
+/* Estilização da seção de introdução */
+.intro {
+    position: relative;
+    background: url('/img/construction.png') no-repeat center center; /* Adiciona a imagem de fundo */
+    background-size: cover; /* Garante que a imagem cubra toda a área */
+    background-attachment: scroll; /* Faz com que a imagem se mova ao rolar a página */
+    color: white; /* Cor do texto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh; /* Define a altura para cobrir a tela toda */
+    width: 100vw; /* Garante que a largura seja 100% da viewport */
+    overflow: hidden; /* Garante que nenhum conteúdo ultrapasse os limites da seção */
+    margin-top: 0px; /* Move a seção para cima, atrás do header */
+    padding-top: 80px; /* Garante que o conteúdo da seção não fique atrás do header */
+}
+
+.intro::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #00000080; /* Sobreposição escura */
+    z-index: 1;
+}
+
+.intro-content {
+    position: relative;
+    z-index: 2; /* Coloca o conteúdo acima da sobreposição */
+}
+
+.intro .certified {
+    font-size: 20px;
+}
+
+.intro .title {
+    font-size: 40px;
+}
+
+.intro .highlight {
+    font-size: 40px;
+    color: #ffee00;
+}
+
+.intro .description {
+    margin: 20px 0;
+}
+
+/* Estilo dos botões */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espaçamento entre os botões */
+    margin-top: 20px; /* Margem superior para separar os botões do texto acima */
+}
+
+.custom-button {
+    background-color: #ffd828;
+    border: none;
+    color: #000;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.custom-button:hover {
+    background-color: #e6c51d;
+}
+
+/* Estilização da grade de notícias */
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.news-item {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.news-item h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.news-item p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.news-item a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.news-item a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo básico para o rodapé */
+footer {
+    background-color: #f0f0f0; /* Cor de fundo do rodapé */
+    padding: 10px; /* Espaçamento interno do rodapé */
+    text-align: center; /* Centraliza o texto dentro do rodapé */
+}
