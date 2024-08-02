@@ -16,7 +16,7 @@ body, html {
 
 /* Estilização básica do header */
 header {
-    background-color: #1d2329e5; /* Cor de fundo do header com transparência */
+    background-color: #202732; /* Cor de fundo do header */
     color: #ffffff; /* Cor do texto no header */
     padding: 10px 0; /* Espaçamento interno do header */
     width: 100%; /* Garante que o header ocupe toda a largura da tela */
@@ -52,12 +52,6 @@ header {
 .menu-nav a:hover {
     background-color: #444; /* Cor de fundo ao passar o mouse sobre os links */
     border-radius: 7px; /* Borda arredondada nos links ao passar o mouse */
-}
-
-/* Estilização básica para o conteúdo principal (main) */
-main {
-    padding: 0; /* Remove espaçamento interno do conteúdo principal */
-    margin: 0; /* Remove qualquer margem que possa estar afetando */
 }
 
 /* Estilização da seção de introdução */
@@ -133,46 +127,201 @@ main {
 }
 
 .custom-button:hover {
-    background-color: #e6c51d;
+    background-color: #c5a819;
 }
 
-/* Estilização da grade de notícias */
+/* Estilização da seção de boas-vindas */
+.welcome-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px;
+}
+
+.welcome-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px; /* Largura máxima do container */
+    width: 100%;
+}
+
+.welcome-content {
+    max-width: 600px; /* Largura máxima do conteúdo de texto */
+}
+
+.welcome-content h2 {
+    font-size: 36px;
+    color: #ffd828;
+    margin-bottom: 10px;
+}
+
+.welcome-content h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.welcome-content p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.welcome-content a.custom-button {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.welcome-image {
+    max-width: 400px; /* Largura máxima da imagem */
+}
+
+.welcome-image img {
+    width: 100%;
+    height: auto;
+}
+
+/* Seção "Why Choose Us" */
+.why-choose-us {
+    padding: 60px 20px; /* Espaçamento interno da seção */
+    background-color: #f5f5f5; /* Cor de fundo da seção */
+    text-align: center; /* Centraliza o texto */
+}
+
+.container-why {
+    max-width: 1200px; /* Largura máxima do container */
+    margin: 0 auto; /* Centraliza o container */
+}
+
+.why-choose-us h2 {
+    font-size: 36px; /* Tamanho da fonte do título */
+    margin-bottom: 20px; /* Espaçamento inferior do título */
+}
+
+.why-choose-us p {
+    font-size: 16px; /* Tamanho da fonte do parágrafo */
+    margin-bottom: 40px; /* Espaçamento inferior do parágrafo */
+    color: #666; /* Cor do texto do parágrafo */
+}
+
+.why-choose-us .features {
+    display: flex; /* Usa flexbox para alinhar os itens */
+    flex-wrap: wrap; /* Permite que os itens quebrem linha se necessário */
+    justify-content: center; /* Centraliza os itens */
+}
+
+.why-choose-us .feature-item {
+    flex: 1; /* Os itens ocupam espaço igual */
+    max-width: 250px; /* Largura máxima dos itens */
+    margin: 20px; /* Espaçamento ao redor dos itens */
+    text-align: center; /* Centraliza o texto dos itens */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave para transformações e sombras */
+}
+
+.why-choose-us .feature-item:hover {
+    transform: translateY(-10px); /* Eleva o item */
+    box-shadow: 0 10px 20px #00000033; /* Adiciona uma sombra */
+}
+
+.why-choose-us .feature-icon {
+    width: 100px; /* Largura do ícone */
+    height: 100px; /* Altura do ícone */
+    margin: 0 auto 20px; /* Centraliza o ícone e adiciona espaçamento inferior */
+    background-color: #ffd828; /* Cor de fundo do ícone */
+    border-radius: 50%; /* Torna o ícone circular */
+    display: flex; /* Usa flexbox para alinhar o conteúdo */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+}
+
+.why-choose-us .icon-border {
+    border-radius: 50%;
+    border: 5px solid #FFD700; /* Adiciona a borda dourada */
+    padding: 10px; /* Adiciona preenchimento para criar um efeito de borda mais espessa */
+}
+
+.why-choose-us .feature-item h3 {
+    font-size: 24px; /* Tamanho da fonte do título do item */
+    margin-bottom: 10px; /* Espaçamento inferior do título do item */
+}
+
+.why-choose-us .feature-item p {
+    font-size: 16px; /* Tamanho da fonte do parágrafo do item */
+    color: #666; /* Cor do texto do parágrafo do item */
+}
+
+/* Estilos para a seção de notícias */
 .news-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .news-item {
     background-color: #fff;
-    padding: 15px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
 }
 
-.news-item h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
+.news-item img {
+    width: 100%;
+    height: auto;
+}
+
+.news-item h3 {
+    font-size: 18px;
+    margin: 15px 0;
 }
 
 .news-item p {
-    font-size: 16px;
-    margin-bottom: 10px;
+    font-size: 14px;
+    color: #555;
+    padding: 0 15px;
 }
 
 .news-item a {
-    color: #007bff;
+    display: inline-block;
+    margin: 15px;
+    padding: 10px 20px;
+    border: 2px solid #000;
     text-decoration: none;
+    color: #000;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .news-item a:hover {
-    text-decoration: underline;
+    background-color: #000;
+    color: #fff;
 }
 
-/* Estilo básico para o rodapé */
-footer {
-    background-color: #f0f0f0; /* Cor de fundo do rodapé */
-    padding: 10px; /* Espaçamento interno do rodapé */
-    text-align: center; /* Centraliza o texto dentro do rodapé */
+.news-item:hover {
+    transform: translateY(-5px);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .menu-nav {
+        display: none; /* Esconde o menu de navegação em telas pequenas */
+    }
+    
+    .intro-content .title,
+    .intro-content .highlight {
+        font-size: 24px; /* Reduz o tamanho da fonte do título em telas pequenas */
+    }
+
+    .welcome-container {
+        flex-direction: column; /* Alinha o conteúdo em coluna em telas pequenas */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    .welcome-content,
+    .welcome-image {
+        max-width: 100%; /* Garante que o conteúdo ocupe 100% da largura */
+    }
 }
