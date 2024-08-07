@@ -213,15 +213,22 @@ header {
 
 .why-choose-us .feature-item {
     flex: 1; /* Os itens ocupam espaço igual */
-    max-width: 250px; /* Largura máxima dos itens */
+    max-width: 400px; /* Largura máxima dos itens */
     margin: 20px; /* Espaçamento ao redor dos itens */
     text-align: center; /* Centraliza o texto dos itens */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave para transformações e sombras */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, height 0.3s ease; /* Transição suave para transformações e sombras */
+    height: 250px; /* Altura base dos itens */
+    overflow: hidden; /* Garante que o conteúdo não ultrapasse os limites dos itens */
+    display: flex; /* Usa Flexbox para alinhar itens */
+    flex-direction: column; /* Alinha itens em coluna */
+    justify-content: center; /* Centraliza itens verticalmente */
+    align-items: center; /* Centraliza itens horizontalmente */
 }
 
 .why-choose-us .feature-item:hover {
     transform: translateY(-10px); /* Eleva o item */
     box-shadow: 0 10px 20px #00000033; /* Adiciona uma sombra */
+    height: 250px; /* Aumenta a altura ao passar o mouse */
 }
 
 .why-choose-us .feature-icon {
@@ -242,7 +249,7 @@ header {
 }
 
 .why-choose-us .feature-item h3 {
-    font-size: 24px; /* Tamanho da fonte do título do item */
+    font-size: 22px; /* Tamanho da fonte do título do item */
     margin-bottom: 10px; /* Espaçamento inferior do título do item */
 }
 
@@ -271,7 +278,8 @@ header {
 
 .news-item img {
     width: 100%;
-    height: auto;
+    height: 200px; /* Definindo uma altura fixa para as imagens */
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorção */
 }
 
 .news-item h3 {
@@ -303,6 +311,7 @@ header {
 .news-item:hover {
     transform: translateY(-5px);
 }
+
 
 /* Responsividade */
 @media (max-width: 768px) {
