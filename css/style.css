@@ -343,7 +343,7 @@ header {
 .section-description {
     text-align: center;
     color: #FFF;
-    margin-bottom: 40px;
+    margin: 20px 400px 40px 400px; /* Define as margens em ordem: topo, direita, base, esquerda */
 }
 
 .filter-buttons {
@@ -352,7 +352,7 @@ header {
 }
 
 .filter-button {
-    background-color: #333;
+    background-color: #33333300;
     color: #FFF;
     padding: 10px 20px;
     margin: 0 10px;
@@ -364,31 +364,48 @@ header {
 
 .filter-button.active,
 .filter-button:hover {
-    background-color: #555;
+    background-color: #333;
 }
 
-.portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+/* Novo CSS para organizar as imagens em duas divs grandes */
+
+.portfolio-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
     max-width: 1000px;
     margin: 0 auto;
 }
 
-.portfolio-item {
-    position: relative;
-    overflow: hidden;
+.large-image {
+    flex: 1; /* Ajusta a proporção para que a imagem grande ocupe mais espaço */
+    max-width: 100%;
 }
 
-.portfolio-item img {
+.large-image img {
     width: 100%;
     height: auto;
     display: block;
+    object-fit: cover; /* Ajusta a imagem para cobrir o contêiner sem distorção */
     transition: transform 0.3s ease;
 }
 
-.portfolio-item:hover img {
-    transform: scale(1.05);
+.small-images {
+    flex: 1; /* Ajusta a proporção para que as imagens pequenas ocupem o restante do espaço */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas para as imagens pequenas */
+    gap: 10px;
+}
+
+.small-images .portfolio-item {
+    overflow: hidden;
+}
+
+.small-images .portfolio-item img {
+    width: 100%;
+    height: 100%; /* Garante que a imagem preencha o contêiner */
+    object-fit: cover; /* Ajusta a imagem para cobrir o contêiner sem distorção */
+    display: block;
 }
 
 
@@ -411,5 +428,22 @@ header {
     .welcome-content,
     .welcome-image {
         max-width: 100%; /* Garante que o conteúdo ocupe 100% da largura */
+    }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .portfolio-container {
+        flex-direction: column; /* Empilha a imagem grande e as imagens pequenas em uma coluna */
+        align-items: center; /* Centraliza o conteúdo */
+    }
+
+    .large-image, .small-images {
+        flex: none; /* Remove o ajuste flexível para dispositivos menores */
+        max-width: 100%;
+    }
+
+    .small-images {
+        grid-template-columns: 1fr; /* Coloca as imagens pequenas em uma coluna única */
     }
 }
