@@ -5,13 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <title>Codemechanic</title>
 </head>
 <body>
     
     <header>
         <nav class="container">
-            <a href="#"><img src="img/logo.png" alt="Logo" class="logo"></a> <!-- Adiciona a logo -->
+            <a href="#"><img src="img/logo2.png" alt="Logo" class="logo"></a>
             <div class="menu-nav">
                 <a href="#">Home</a>
                 <a href="#">Page</a> 
@@ -24,6 +25,7 @@
     </header>
 
     <main>
+        <!-- CAPA -->
         <section class="intro">
             <div class="intro-content">
                 <p class="certified">We are Certified Engineers</p>
@@ -38,7 +40,7 @@
             </div>
         </section>
 
-        <!-- Apresentação -->
+        <!-- APRESENTAÇÃO -->
         
         <section class="welcome-section">
             <div class="welcome-container">
@@ -63,6 +65,8 @@
                 </div>
             </div>
         </section>
+
+        <!-- SEÇÃO "WHY CHOSE US?" -->
         
         <section class="why-choose-us">
             <div class="container-why">
@@ -100,6 +104,8 @@
                 </div>
             </div>
         </section>        
+
+        <!-- SEÇÃO "OUR SERVICES" -->
         
         <section class="news-section">
             <h2 class="section-title">OUR SERVICES</h2>
@@ -125,8 +131,10 @@
             </div>
         </section>
         
+        <!-- SEÇÃO "MADE WITH LOVE" -->
+
         <section class="portfolio">
-            <div>
+            <div class="portfolio-content">
                 <h2 class="section-title-love">MADE WITH LOVE</h2>
                 <p class="section-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias nulla necessitatibus architecto deleniti, vitae cum veniam magnam dignissimos excepturi. Nulla adipisci ex commodi sint, dolores ducimus tenetur quam suscipit quas?</p>
                 <div class="filter-buttons">
@@ -158,13 +166,110 @@
                     </div>
                 </div>
             </div>
-        </section>              
+        </section>
 
+        <!-- SEÇÃO DE COMENTÁRIOS -->
+        
+        <section class="customer-reviews">
+            <h2 class="section-title">CUSTOMER REVIEWS</h2>
+            <p class="section-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis consectetur magna, dolor sit amet.</p>
+            <div class="review-container">
+                <div class="review">
+                    <div class="speech-bubble">
+                        <p>"Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione."</p>
+                    </div>
+                    <div class="reviewer-info">
+                        <img src="img/john.png" alt="John Smith">
+                        <p>JOHN SMITH</p>
+                    </div>
+                </div>
+                <div class="review">
+                    <div class="speech-bubble highlighted">
+                        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Sed posuere."</p>
+                    </div>
+                    <div class="reviewer-info">
+                        <img src="img/john.png" alt="Jane Doe">
+                        <p>JOHN SMITH</p>
+                    </div>
+                </div>
+                <div class="review">
+                    <div class="speech-bubble">
+                        <p>"Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione."</p>
+                    </div>
+                    <div class="reviewer-info">
+                        <img src="img/john.png" alt="John Smith 2" >
+                        <p>JOHN SMITH</p>
+                    </div>
+                </div>
+            </div>
+        </section>           
     </main>
-
-    <footer>
-        <p>Rodapé da página...</p>
+    
+    <!-- RODAPÉ -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-column about-company">
+                <h3>About Company</h3>
+                <img src="img/logo2.png" alt="Logo" class="logo">
+                <p>Your Company Slogan Here</p>
+                <p>Nome enim voluptatem quis voluptats ut aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+                <div class="social-icons">
+                    <a href="#"><img src="img/facebook.png" alt="Facebook"></a>
+                    <a href="#"><img src="img/twitter.png" alt="Twitter"></a>
+                    <a href="#"><img src="img/youtube.png" alt="YouTube"></a>
+                    <a href="#"><img src="img/google.png" alt="Google"></a>
+                    <a href="#"><img src="img/linkedin.png" alt="LinkedIn"></a>
+                </div>
+            </div>
+            <div class="footer-column explore-link">
+                <h3>Explore link</h3>
+                <ul>
+                    <li><a href="#">&#9656; Our services</a></li>
+                    <li><a href="#">&#9656; Meet our team</a></li>
+                    <li><a href="#">&#9656; Forum</a></li>
+                    <li><a href="#">&#9656; Help center</a></li>
+                    <li><a href="#">&#9656; Contact Celles</a></li>
+                    <li><a href="#">&#9656; Privacy Policy</a></li>
+                    <li><a href="#">&#9656; Site map</a></li>
+                </ul>
+            </div>
+            <div class="footer-column latest-post">
+                <h3>Latest post</h3>
+                <ul>
+                    <li>
+                        <span class="post-date">20 Aug</span>
+                        <span class="post-title"><a href="#">Lorem ipsum dolor sit amet</a></span>
+                    </li>
+                    <li>
+                        <span class="post-date">19 Aug</span>
+                        <span class="post-title"><a href="#">Sed ut perspiciatis unde</a></span>
+                    </li>
+                    <li>
+                        <span class="post-date">18 Aug</span>
+                        <span class="post-title"><a href="#">Nemo enim ipsam voluptatem</a></span>
+                    </li>
+                    <li>
+                        <span class="post-date">17 Aug</span>
+                        <span class="post-title"><a href="#">Quis autem vel eum iure</a></span>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-column contact-us">
+                <h3>Contact us</h3>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> 124 New Line, London UK</li>
+                    <li><i class="fas fa-envelope"></i> hello@yourmail.com</li>
+                    <li><i class="fas fa-phone-alt"></i> +44 00 00 1234</li>
+                    <li><i class="fas fa-phone-alt"></i> +44 00 00 1234</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 | Designed by ChatGPT</p>
+        </div>
     </footer>
+    
+    
 
     <script src="js/script.js"></script>
 

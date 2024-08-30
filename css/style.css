@@ -1,3 +1,14 @@
+:root {
+    --cor-header: #202732;
+    --letras-brancas: #ffffff;
+    --subtitulos: #333;
+    --diversos: #444;
+    --sobreposicao1: #00000080;
+    --titulo-site: #ffee00;
+    --botoes-e-icones: #ffd828;
+    --hover-botoes: #c5a819;
+}
+
 /* Reset de margens e preenchimentos padrão */
 * {
     margin: 0;
@@ -16,8 +27,8 @@ body, html {
 
 /* Estilização básica do header */
 header {
-    background-color: #202732; /* Cor de fundo do header */
-    color: #ffffff; /* Cor do texto no header */
+    background-color: var(--cor-header); /* Cor de fundo do header */
+    color: var(--letras-brancas); /* Cor do texto no header */
     padding: 10px 0; /* Espaçamento interno do header */
     width: 100%; /* Garante que o header ocupe toda a largura da tela */
     position: fixed; /* Fixa o header na parte superior da página */
@@ -43,14 +54,14 @@ header {
 }
 
 .menu-nav a {
-    color: #ffffff; /* Cor dos links no header */
+    color: var(--letras-brancas); /* Cor dos links no header */
     text-decoration: none; /* Remove sublinhado dos links */
     padding: 10px 15px; /* Espaçamento interno dos links */
 }
 
 /* Estilo de hover para os links no header */
 .menu-nav a:hover {
-    background-color: #444; /* Cor de fundo ao passar o mouse sobre os links */
+    background-color: var(--diversos); /* Cor de fundo ao passar o mouse sobre os links */
     border-radius: 7px; /* Borda arredondada nos links ao passar o mouse */
 }
 
@@ -60,7 +71,7 @@ header {
     background: url('/img/construction.png') no-repeat center center; /* Adiciona a imagem de fundo */
     background-size: cover; /* Garante que a imagem cubra toda a área */
     background-attachment: scroll; /* Faz com que a imagem se mova ao rolar a página */
-    color: white; /* Cor do texto */
+    color: var(--letras-brancas); /* Cor do texto */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -79,7 +90,7 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    background: #00000080; /* Sobreposição escura */
+    background: var(--sobreposicao1); /* Sobreposição escura */
     z-index: 1;
 }
 
@@ -98,7 +109,7 @@ header {
 
 .intro .highlight {
     font-size: 40px;
-    color: #ffee00;
+    color: var(--titulo-site);
 }
 
 .intro .description {
@@ -114,9 +125,9 @@ header {
 }
 
 .custom-button {
-    background-color: #ffd828;
+    background-color: var(--botoes-e-icones);
     border: none;
-    color: #fff;
+    color: var(--letras-brancas);
     padding: 10px 20px;
     text-align: center;
     text-decoration: none;
@@ -128,7 +139,7 @@ header {
 }
 
 .custom-button:hover {
-    background-color: #c5a819;
+    background-color: var(--hover-botoes);
 }
 
 /* Estilização da seção de boas-vindas */
@@ -153,13 +164,13 @@ header {
 
 .welcome-content h2 {
     font-size: 36px;
-    color: #ffd828;
+    color: var(--botoes-e-icones);
     margin-bottom: 10px;
 }
 
 .welcome-content h3 {
     font-size: 24px;
-    color: #333;
+    color: var(--subtitulos);
     margin-bottom: 20px;
 }
 
@@ -236,7 +247,7 @@ header {
     width: 100px; /* Largura do ícone */
     height: 100px; /* Altura do ícone */
     margin: 0 auto 20px; /* Centraliza o ícone e adiciona espaçamento inferior */
-    background-color: #ffd828; /* Cor de fundo do ícone */
+    background-color: var(--botoes-e-icones); /* Cor de fundo do ícone */
     border-radius: 50%; /* Torna o ícone circular */
     display: flex; /* Usa flexbox para alinhar o conteúdo */
     justify-content: center; /* Centraliza o conteúdo horizontalmente */
@@ -245,7 +256,6 @@ header {
 
 .why-choose-us .icon-border {
     border-radius: 50%;
-    border: 5px solid #FFD700; /* Adiciona a borda dourada */
     padding: 10px; /* Adiciona preenchimento para criar um efeito de borda mais espessa */
 }
 
@@ -270,8 +280,7 @@ header {
 }
 
 .news-item {
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px #0000001a;
     overflow: hidden;
     transition: transform 0.3s ease-in-out;
     text-align: center;
@@ -304,9 +313,9 @@ header {
 
 .news-item a {
     margin: 20px;
-    background-color: #ffd828;
+    background-color: var(--botoes-e-icones);
     border: none;
-    color: #fff;
+    color: var(--letras-brancas);
     padding: 10px 20px;
     text-align: center;
     text-decoration: none;
@@ -317,33 +326,52 @@ header {
 }
 
 .news-item a:hover {
-    background-color: #c5a819;
-    color: #fff;
+    background-color: var(--hover-botoes);
+    color: var(--letras-brancas);
 }
 
 .news-item:hover {
     transform: translateY(-5px);
 }
 
-/* PORTFOLIO */
+/* PORTFOLIO MADE WITH LOVE */
 
 .portfolio {
-    background-color: #D4A700; /* Cor de fundo semelhante ao amarelo */
+    position: relative;
+    background: url(../img/colagem.png) no-repeat center center;
+    background-size: cover; /* Garante que a imagem cubra toda a área */
+    background-attachment: scroll; /* Faz com que a imagem se mova ao rolar a página */
     padding: 50px 0;
+}
+
+.portfolio::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #d4a600f5; /* Sobreposição semelhante ao amarelo */
+    z-index: 1;
+}
+
+.portfolio-content {
+    position: relative;
+    z-index: 2;
 }
 
 .section-title-love {
     text-align: center;
     font-size: 32px;
-    color: #FFF;
+    color: var(--letras-brancas);
     font-weight: bold;
     margin-bottom: 10px;
 }
 
 .section-description {
     text-align: center;
-    color: #FFF;
     margin: 20px 400px 40px 400px; /* Define as margens em ordem: topo, direita, base, esquerda */
+    color: var(--letras-brancas);
 }
 
 .filter-buttons {
@@ -353,7 +381,7 @@ header {
 
 .filter-button {
     background-color: #33333300;
-    color: #FFF;
+    color: var(--letras-brancas);
     padding: 10px 20px;
     margin: 0 10px;
     border: none;
@@ -364,7 +392,7 @@ header {
 
 .filter-button.active,
 .filter-button:hover {
-    background-color: #333;
+    background-color: var(--subtitulos); /* Fundo dos botões*/
 }
 
 /* Novo CSS para organizar as imagens em duas divs grandes */
@@ -406,6 +434,189 @@ header {
     height: 100%; /* Garante que a imagem preencha o contêiner */
     object-fit: cover; /* Ajusta a imagem para cobrir o contêiner sem distorção */
     display: block;
+}
+
+
+/* CUSTOMER REVIEWS */
+.customer-reviews {
+    position: relative;
+    padding: 50px 0;
+    text-align: center;
+    background: url(../img/desenho-lapis.png) no-repeat right top;
+    background-size: contain; /* Ajusta o tamanho da imagem ao contêiner */
+}
+
+.customer-reviews::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffffe7; /* Sobreposição semelhante ao amarelo */
+    z-index: 1;
+}
+
+.section-title,
+.section-description,
+.review-container {
+    position: relative;
+    z-index: 2;
+}
+
+.review-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.review {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 300px;
+}
+
+.speech-bubble {
+    padding: 20px;
+    border-radius: 20px;
+    position: relative;
+    margin-bottom: 20px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0px 0px 10px #0000001a;
+}
+
+.speech-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border: 20px solid transparent;
+    border-top-color: var(--letras-brancas);
+    border-bottom: 0;
+    border-right: 0;
+    margin-left: -10px;
+}
+
+/* Estilo específico para o balão customizado */
+.highlighted {
+    background-color: #FFD700;
+    border-color: #FFD700;
+}
+
+.highlighted::after {
+    border-top-color: #FFD700; /* Cor diferente para a pontinha */
+}
+
+.reviewer-info {
+    text-align: center;
+}
+
+.reviewer-info img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.reviewer-info p {
+    margin: 0;
+    font-weight: bold;
+}
+
+
+/* RODAPÉ */
+.site-footer {
+    background-color: #222;
+    color: var(--letras-brancas);
+    padding: 50px 0 0 0;
+    position: relative;
+    background-image: url('/img/cidade.png'); /* Adicione a URL da imagem de fundo */
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+.site-footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000413dc; /* Sobreposição escura */
+    z-index: -1;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 2;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 250px;
+    margin: 20px;
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #FFD700;
+}
+
+.footer-column p, .footer-column ul, .footer-column li {
+    color: #CCC;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: var(--letras-brancas);
+    text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+    color: #FFD700;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    background-color: var(--botoes-e-icones);
+    border-radius: 50%;
+    margin-top: 20px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid var(--diversos);
+    margin-top: 30px;
+    font-size: 14px;
+    color: #CCC;
+    background-color: var(--cor-header);
 }
 
 
