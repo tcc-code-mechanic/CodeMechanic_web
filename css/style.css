@@ -34,6 +34,7 @@ body, html {
     height: 100%; /* Garante que o body e o html ocupem 100% da altura da tela */
     width: 100%; /* Garante que o body e o html ocupem 100% da largura da tela */
     overflow-x: hidden; /* Evita rolagem horizontal */
+    scroll-behavior: smooth !important; /* Força a rolagem suave */
 }
 
 section {
@@ -42,7 +43,6 @@ section {
 
 /* Estilização básica do header */
 header {
-    scroll-behavior: smooth !important; /* Força a rolagem suave */
     background-color: var(--cor-header); /* Cor de fundo do header */
     color: var(--letras-brancas); /* Cor do texto no header */
     padding: 10px 0; /* Espaçamento interno do header */
