@@ -1,16 +1,17 @@
 :root {
-    --cor-header: #202732;
+    --cor-header: #005a7e;
     --diversos: #444;
     --sobreposicao1: #00000080;
     --sobreposicao-rodape: #000413dc;
     --sobreposicao-review: #ffffffe7;
-    --botoes-e-icones: #ffd828;
-    --hover-botoes: #c5a819;
+    --botoes-e-icones: #1294A3;
+    --hover-botoes: #0f626b;
     --fundo-why-choose-us: #f3f1f1;
     --fundo-portfolio: #d4a600f5;
     --botao-portfolio: #33333300;
     --sombra: #00000033;
     --balao: #FFD700;
+    --titulo-site: #98ff98;
 
     /* LETRAS */
     --letras-brancas: #ffffff;
@@ -82,9 +83,10 @@ header {
 }
 
 /* Estilização da seção de introdução */
+/* Estilização da seção de introdução */
 .intro {
     position: relative;
-    background: url('/img/construction.png') no-repeat center center; /* Adiciona a imagem de fundo */
+    background: url('/img/principal.png') no-repeat center center; /* Adiciona a imagem de fundo */
     background-size: cover; /* Garante que a imagem cubra toda a área */
     background-attachment: scroll; /* Faz com que a imagem se mova ao rolar a página */
     color: var(--letras-brancas); /* Cor do texto */
@@ -92,7 +94,7 @@ header {
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 100vh; /* Define a altura para cobrir a tela toda */
+    height: 60vh; /* Define a altura para cobrir a tela toda */
     width: 100vw; /* Garante que a largura seja 100% da viewport */
     overflow: hidden; /* Garante que nenhum conteúdo ultrapasse os limites da seção */
     margin-top: 0px; /* Move a seção para cima, atrás do header */
@@ -125,7 +127,8 @@ header {
 
 .intro .highlight {
     font-size: 40px;
-    color: var(--letra-cor);
+    color: var(--titulo-site);
+
 }
 
 .intro .description {
@@ -260,16 +263,18 @@ header {
 }
 
 .why-choose-us .feature-icon {
-    width: 100px; /* Largura do ícone */
-    height: 100px; /* Altura do ícone */
+    width: 200px; /* Largura do ícone */
+    height: 200px; /* Altura do ícone */
     margin: 0 auto 20px; /* Centraliza o ícone e adiciona espaçamento inferior */
-    background-color: var(--botoes-e-icones); /* Cor de fundo do ícone */
-    border-radius: 50%; /* Torna o ícone circular */
     display: flex; /* Usa flexbox para alinhar o conteúdo */
     justify-content: center; /* Centraliza o conteúdo horizontalmente */
     align-items: center; /* Centraliza o conteúdo verticalmente */
 }
 
+.why-choose-us .feature-icon img {
+    width: 50%;
+    height: auto;
+}
 .why-choose-us .icon-border {
     border-radius: 50%;
     padding: 10px; /* Adiciona preenchimento para criar um efeito de borda mais espessa */
@@ -357,7 +362,7 @@ header {
     background: url(../img/colagem.png) no-repeat center center;
     background-size: cover; /* Garante que a imagem cubra toda a área */
     background-attachment: scroll; /* Faz com que a imagem se mova ao rolar a página */
-    padding: 50px 0;
+    padding: 20px 0;
 }
 
 .portfolio::before {
@@ -367,8 +372,7 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--fundo-portfolio); /* Sobreposição semelhante ao amarelo */
-    z-index: 1;
+    background-color:#98cad1;
 }
 
 .portfolio-content {
@@ -397,7 +401,7 @@ header {
 
 .filter-button {
     background-color: var(--botao-portfolio);
-    color: var(--letras-brancas);
+    color: #000000;
     padding: 10px 20px;
     margin: 0 10px;
     border: none;
