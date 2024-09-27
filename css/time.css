@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8f8;
+    margin: 0;
+    padding: 0;
+}
+
+hr {
+    border: 0;
+    border-top: 2px solid #ccc;
+    width: 80%;
+    margin: 20px auto;
+    border-color: #0f626b;
+}
+
+.team-section {
+    padding: 50px;
+    padding-top: 80px;
+}
+
+.team-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.team-member {
+    display: flex;
+    align-items: center;
+    background-color: #f0f8f8;
+    border-radius: 10px;
+    padding: 20px;
+    width: 80%;
+    justify-content: space-between; /* Espaça o conteúdo corretamente */
+}
+
+/* Blocos pares: imagem à direita e texto à esquerda */
+.team-member:nth-child(even) {
+    flex-direction: row-reverse; /* Imagem à direita e texto à esquerda */
+    justify-content: flex-end; /* Ajusta para garantir alinhamento */
+}
+
+/* Blocos ímpares: imagem à esquerda e texto à direita */
+.team-member:nth-child(odd) {
+    flex-direction: row; /* Imagem à esquerda e texto à direita */
+    justify-content: flex-start; /* Ajusta para garantir alinhamento */
+}
+
+.team-member img {
+    width: 360px;
+    height: 360px;
+    border-radius: 50%;
+    margin: 0 20px;
+    object-fit: cover;
+}
+
+/* Alinhamento do texto */
+.member-info {
+    max-width: 60%;
+    text-align: left; /* Mantém o texto sempre alinhado à esquerda */
+}
+
+.member-info h3 {
+    font-size: 3em;
+    color: #1294A3;
+    margin-bottom: 20px;
+}
+
+.member-info p {
+    font-size: 1.2em;
+    color: #333;
+    line-height: 1.6;
+}
