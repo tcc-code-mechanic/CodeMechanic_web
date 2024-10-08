@@ -2,8 +2,8 @@
     --cor-header: #005a7e;
     --diversos: #006f9b;
     --sobreposicao1: #00000080;
-    --sobreposicao-rodape: #000413dc;
-    --sobreposicao-review: #ffffffe7;
+    --sobreposicao-rodape: #000713ea;
+    --sobreposicao-review: #ffffffee;
     --botoes-e-icones: #1294A3;
     --hover-botoes: #0f626b;
     --fundo-why-choose-us: #f3f1f1;
@@ -17,7 +17,7 @@
     --letras-brancas: #ffffff;
     --letras-escuras: #666;
     --subtitulos: #333;
-    --letra-cor: #ffee00;
+    --letra-cor: #00ebd7;
     --letras-rodape: #ccc;
 }
 
@@ -39,7 +39,7 @@ body, html {
 }
 
 section {
-    scroll-margin-top: 60px; /* Ajuste este valor para o tamanho do seu header */
+    scroll-margin-top: 57px; /* Ajuste este valor para o tamanho do seu header */
 }
 
 /* Estilização básica do header */
@@ -62,7 +62,7 @@ header {
 
 /* Estilo para a logo */
 .logo {
-    height: 40px; /* Ajusta a altura da logo conforme necessário */
+    height: 20px; /* Ajusta a altura da logo conforme necessário */
 }
 
 /* Estilo para a navegação */
@@ -73,7 +73,7 @@ header {
 .menu-nav a {
     color: var(--letras-brancas); /* Cor dos links no header */
     text-decoration: none; /* Remove sublinhado dos links */
-    padding: 10px 15px; /* Espaçamento interno dos links */
+    padding: 11px 15px; /* Espaçamento interno dos links */
 }
 
 /* Estilo de hover para os links no header */
@@ -82,7 +82,6 @@ header {
     border-radius: 7px; /* Borda arredondada nos links ao passar o mouse */
 }
 
-/* Estilização da seção de introdução */
 /* Estilização da seção de introdução */
 .intro {
     position: relative;
@@ -94,7 +93,7 @@ header {
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 60vh; /* Define a altura para cobrir a tela toda */
+    height: 100vh; /* Define a altura para cobrir a tela toda */
     width: 100vw; /* Garante que a largura seja 100% da viewport */
     overflow: hidden; /* Garante que nenhum conteúdo ultrapasse os limites da seção */
     margin-top: 0px; /* Move a seção para cima, atrás do header */
@@ -204,6 +203,35 @@ header {
     margin-top: 20px;
 }
 
+/* Integrantes */
+
+/* Esconder a seção dos integrantes por padrão */
+.team-section {
+    display: none;
+    margin-top: 20px;
+}
+
+/* Estilos para os membros da equipe */
+.team-member {
+    display: inline-block;
+    text-align: center;
+    margin: 10px;
+}
+
+.team-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* Torna a imagem redonda */
+    object-fit: cover; /* Ajusta a imagem para caber dentro do círculo */
+    margin-bottom: 10px;
+}
+
+/* Mostrar a seção quando ativa */
+.show-team {
+    display: block;
+}
+
+
 .welcome-image {
     max-width: 400px; /* Largura máxima da imagem */
 }
@@ -291,6 +319,10 @@ header {
 }
 
 /* Estilos para a seção de notícias */
+.news-section {
+    padding: 16px;
+}
+
 .news-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -595,7 +627,7 @@ iframe {
     color: var(--letras-brancas);
     padding: 50px 0 0 0;
     position: relative;
-    background-image: url('/img/cidade.png'); /* Adicione a URL da imagem de fundo */
+    background-image: url('/img/mecanica.png'); /* Adicione a URL da imagem de fundo */
     background-size: cover;
     background-position: center;
     z-index: 1;
@@ -614,18 +646,28 @@ iframe {
 
 .footer-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around; /* Mantém o espaço uniforme entre as colunas */
     max-width: 1200px;
     margin: 0 auto;
     flex-wrap: wrap;
     position: relative;
     z-index: 2;
+    padding: 0 20px; /* Um pouco de padding nas laterais */
 }
 
 .footer-column {
     flex: 1;
     min-width: 250px;
     margin: 20px;
+    text-align: left; /* Alinha o conteúdo à esquerda */
+}
+
+.footer-column.instagram {
+    margin-left: 160px;
+}
+
+.footer-column.github {
+    margin-left: 100px;
 }
 
 .footer-column h3 {
