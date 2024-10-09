@@ -1,8 +1,42 @@
+/* SOBRE O APP */
+#about-app {
+    text-align: center;
+    padding: 60px 0;
+    background-color: #f5f5f5;
+}
+
+#about-app h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #005a7e;
+}
+
+#about-app p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #333;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+#about-app .btn {
+    background-color: #005a7e;
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+#about-app .btn:hover {
+    background-color: #004a68;
+}
+
 /* Estilos rápidos para layout de equipe */
 .team-container {
-    max-width: 1200px;
+    max-width: 1500px;
     margin: 0 auto;
-    padding: 50px 20px;
+    padding: 178px 20px;
     text-align: center;
 }
 
@@ -21,6 +55,7 @@
     width: 150px;
     height: 150px;
     border-radius: 50%;
+    object-fit: cover; /* Mantém o aspecto correto da imagem sem esticar */
     margin-bottom: 15px;
 }
 
@@ -32,6 +67,10 @@
 .team-member p {
     font-size: 14px;
     color: #555; /* Cor do texto da descrição */
+}
+
+.team-container h2 {
+    padding-bottom: 30px;
 }
 
 footer {
