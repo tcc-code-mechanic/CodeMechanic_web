@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Equipe</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Saiba Mais - App e Desktop</title>
     <link rel="stylesheet" href="css/time.css">
 </head>
 <body>
@@ -15,55 +14,43 @@
     </header>
 
     <main>
-        <!-- SOBRE O APP -->
+
         <section id="about-app">
             <div class="container">
-                <h2>Conheça o Nosso App!</h2>
-                <p>
-                    Nosso aplicativo foi desenvolvido para facilitar o acesso aos nossos serviços e para
-                    proporcionar uma experiência completa, diretamente do seu dispositivo móvel. Baixe agora e explore
-                    tudo o que podemos oferecer, desde agendamentos até suporte especializado na palma da sua mão!
+                <h2>Conheça o Nosso Aplicativo</h2>
+                <p class="app-description">
+                    O nosso aplicativo foi desenvolvido para facilitar o acesso aos nossos serviços, proporcionando uma experiência completa na palma da sua mão. Com uma interface intuitiva e funcionalidades práticas, você poderá gerenciar suas tarefas de forma simples e eficiente.
                 </p>
-                <a href="link-do-app" class="btn">Baixar Agora</a>
+        
+                <!-- Moldura do celular -->
+                <div class="phone-frame">
+                    <div class="carousel-container">
+                        <div class="carousel-images">
+                            <img src="img/app-splash.png" alt="Tela 1 do App" class="active">
+                            <img src="img/app-login.png" alt="Tela 2 do App">
+                            <img src="img/app-cadastro.png" alt="Tela 3 do App">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="carousel-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+        
+                <p class="carousel-caption">Tela de Login, com isso, o usuário, após se cadastrar, entra com seu email e senha.</p>
             </div>
-        </section>  
-
-        <!-- INTEGRANTES -->
-        <section class="team-container">
-            <h2>Nossa Equipe</h2>
-
-            <!-- Integrante 1 -->
-            <div class="team-member">
-                <img src="img/gansa.jpg" alt="Foto de Lethicia">
-                <h3>Lethicia Bafitis</h3>
-                <p>Redatora e Programadora mobile</p>
-            </div>
-
-            <!-- Integrante 2 -->
-            <div class="team-member">
-                <img src="img/luan.jpeg" alt="Foto de Luan">
-                <h3>Luan Gomes</h3>
-                <p>Desenvolvedor Web</p>
-            </div>
-
-            <!-- Integrante 3 -->
-            <div class="team-member">
-                <img src="img/nicoli.jpg" alt="Foto de Nicolis">
-                <h3>Nicoli Santana</h3>
-                <p>Desenvolvedora para Desktop</p>
-            </div>
-
-            <!-- Integrante 4 -->
-            <div class="team-member">
-                <img src="img/welder.jpg" alt="Foto de Welder">
-                <h3>Welder Handson</h3>
-                <p>Ajudante Mobile</p>
-            </div>
-        </section>
+        </section>                           
+        
     </main>
 
     <footer>
         <p>© 2024 | CodeMechanic</p>
     </footer>
+
+
+    <script src="js/time.js"></script>
+
 </body>
 </html>

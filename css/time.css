@@ -1,3 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Tw Cen MT';
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Garante que o body e o html ocupem 100% da altura da tela */
+    width: 100%; /* Garante que o body e o html ocupem 100% da largura da tela */
+    overflow-x: hidden; /* Evita rolagem horizontal */
+    scroll-behavior: smooth; /* Força a rolagem suave */
+}
+
+header {
+    background-color: #005a7e; /* Cor de fundo do header */
+    padding: 10px 0; /* Espaçamento interno do header */
+    width: 100%; /* Garante que o header ocupe toda a largura da tela */
+    position: fixed; /* Fixa o header na parte superior da página */
+    top: 0; /* Posiciona o header no topo */
+    z-index: 1000; /* Define a ordem de empilhamento (pode ser ajustado conforme necessário) */
+}
+
+.logo {
+    height: 20px; /* Ajusta a altura da logo conforme necessário */
+}
+
 /* SOBRE O APP */
 #about-app {
     text-align: center;
@@ -11,67 +40,85 @@
     color: #005a7e;
 }
 
-#about-app p {
+#about-app .app-description {
     font-size: 1.2rem;
-    margin-bottom: 30px;
     color: #333;
     max-width: 700px;
+    margin: 0 auto 30px;
+}
+
+/* Moldura do celular com imagem de fundo */
+.phone-frame {
+    width: 230px;
+    height: 450px;
+    background-image: url('/img/iphone.png'); /* Adicione aqui a imagem do celular */
+    background-size: cover;
+    background-position: center;
+    position: relative;
     margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-#about-app .btn {
-    background-color: #005a7e;
-    color: #fff;
-    padding: 12px 30px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 1.1rem;
+/* Estilos do container do carrossel */
+.carousel-container {
+    width: 85%; /* Ajuste conforme necessário para caber na tela do celular */
+    height: 85%;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
 }
 
-#about-app .btn:hover {
-    background-color: #004a68;
+.carousel-images {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 
-/* Estilos rápidos para layout de equipe */
-.team-container {
-    max-width: 1500px;
-    margin: 0 auto;
-    padding: 178px 20px;
-    text-align: center;
-}
-
-.team-member {
-    display: inline-block;
-    width: 250px;
-    margin: 20px;
-    text-align: center;
-    background-color: #f0f0f0; /* Fundo básico, mude conforme necessário */
-    padding: 20px;
+.carousel-images img {
+    width: 100%;
+    height: 100%; /* Para garantir que a imagem preencha a moldura */
+    display: none;
     border-radius: 10px;
-    box-shadow: 0 4px 6px #0000001a;
+    object-fit: cover; /* Garante que a imagem cubra toda a área da moldura */
+    transition: opacity 0.5s ease-in-out; /* Transição suave */
 }
 
-.team-member img {
-    width: 150px;
-    height: 150px;
+.carousel-images img.active {
+    display: block;
+    opacity: 1;
+}
+
+/* Bolinhas de navegação */
+.carousel-dots {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.carousel-dots .dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    background-color: #bbb;
     border-radius: 50%;
-    object-fit: cover; /* Mantém o aspecto correto da imagem sem esticar */
-    margin-bottom: 15px;
+    cursor: pointer;
 }
 
-.team-member h3 {
-    margin: 10px 0;
-    color: #005a7e; /* Cor do título */
+.carousel-dots .dot.active {
+    background-color: #005a7e;
 }
 
-.team-member p {
-    font-size: 14px;
-    color: #555; /* Cor do texto da descrição */
+.carousel-caption {
+    margin-top: 15px;
+    font-size: 1rem;
+    color: #555;
+    max-width: 350px;
+    margin: 15px auto;
 }
 
-.team-container h2 {
-    padding-bottom: 30px;
-}
 
 footer {
     text-align: center;
@@ -83,7 +130,7 @@ footer {
 
 /* Ajuste para telas menores */
 @media screen and (max-width: 768px) {
-    .team-member {
-        width: 100%;
+    .carousel-container {
+        width: 90%; /* Ajuste o tamanho em telas menores */
     }
 }
