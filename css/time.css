@@ -54,7 +54,7 @@ header {
 .phone-frame {
     width: 230px;
     height: 450px;
-    background-image: url('/img/iphone.png'); /* Adicione aqui a imagem do celular */
+    background-image: url('../img/iphone.png'); /* Adicione aqui a imagem do celular */
     background-size: cover;
     background-position: center;
     position: relative;
