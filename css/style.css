@@ -85,7 +85,7 @@ header {
 /* Estilização da seção de introdução */
 .intro {
     position: relative;
-    background: url('/img/principal.png') no-repeat center center; /* Adiciona a imagem de fundo */
+    background: url('../img/principal.png') no-repeat center center; /* Adiciona a imagem de fundo */
     background-size: cover; /* Garante que a imagem cubra toda a área */
     background-attachment: scroll; /* Faz com que a imagem se mova ao rolar a página */
     color: var(--letras-brancas); /* Cor do texto */
@@ -612,7 +612,7 @@ iframe {
     color: var(--letras-brancas);
     padding: 50px 0 0 0;
     position: relative;
-    background-image: url('/img/mecanica.png'); /* Adicione a URL da imagem de fundo */
+    background-image: url('../img/mecanica.png'); /* Adicione a URL da imagem de fundo */
     background-size: cover;
     background-position: center;
     z-index: 1;

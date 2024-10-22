@@ -1,7 +1,14 @@
-// Carrossel Automático
 let currentIndex = 0;
 const images = document.querySelectorAll('.carousel-images img');
 const dots = document.querySelectorAll('.carousel-dots .dot');
+const caption = document.querySelector('.carousel-caption');
+
+// Array com as legendas de cada imagem
+const captions = [
+    'Tela de Splash do App, onde o usuário visualiza o logotipo ao abrir.',
+    'Tela de Login, onde o usuário pode entrar com seu email e senha.',
+    'Tela de Cadastro, permitindo que novos usuários se cadastrem.'
+];
 
 function showImage(index) {
     images.forEach((img, i) => {
@@ -12,6 +19,8 @@ function showImage(index) {
             dots[i].classList.add('active');
         }
     });
+    // Atualiza a legenda com base no índice da imagem
+    caption.textContent = captions[index];
 }
 
 function nextImage() {
@@ -29,3 +38,6 @@ dots.forEach((dot, index) => {
         showImage(currentIndex);
     });
 });
+
+// Exibe a primeira imagem e legenda ao carregar a página
+showImage(currentIndex);
