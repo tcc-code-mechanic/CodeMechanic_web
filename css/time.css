@@ -58,7 +58,7 @@ header {
     background-size: cover;
     background-position: center;
     position: relative;
-    margin: 0 auto;
+    margin: 15px auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -97,19 +97,25 @@ header {
 }
 
 /* Bolinhas de navegação */
-.carousel-dots-app {
-    text-align: center;
-    margin-top: 15px;
-}
 
-.carousel-dots-app .dot {
+/* Estilo padrão para as bolinhas (dots) */
+.carousel-dots-app .dot, 
+.carousel-dots-desktop .dot {
+    display: inline-block;
     width: 12px;
     height: 12px;
+    margin: 0 5px;
+    background-color: #ddd; /* Cor de fundo padrão */
+    border-radius: 50%; /* Para garantir que fiquem circulares */
+    cursor: pointer;
 }
 
-.carousel-dots-app .dot.active {
-    background-color: #005a7e;
+/* Bolinha ativa (cor diferente) */
+.carousel-dots-app .dot.active, 
+.carousel-dots-desktop .dot.active {
+    background-color: #005a7e; /* Cor da bolinha ativa */
 }
+
 
 .carousel-caption {
     margin-top: 15px;
@@ -162,27 +168,19 @@ header {
 }
 
 .carousel-images-desktop img {
-    width: 100%;
-    height: 100%;
     display: none;
-    opacity: 0;
-    border-radius: 10px;
-    object-fit: cover;
-    transition: opacity 1s ease-in-out;
+    max-width: 100%; /* para garantir que a imagem não ultrapasse a largura da moldura */
+    height: auto; /* para manter a proporção da imagem */
+    object-fit: cover; /* ajusta a imagem para cobrir toda a moldura */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* centraliza a imagem */
 }
 
 .carousel-images-desktop img.active {
     display: block;
     opacity: 1;
-}
-
-.carousel-dots-desktop .dot {
-    width: 12px;
-    height: 12px;
-}
-
-.carousel-dots-desktop .dot.active {
-    background-color: #005a7e;
 }
 
 /* Restante dos estilos iguais à section do app */
