@@ -318,21 +318,41 @@ header {
     color: var(--letras-escuras); /* Cor do texto do parágrafo do item */
 }
 
+
 /* Estilos para a seção de notícias */
 .news-section {
     padding: 16px;
+    width: 100%;
+}
+
+.section-title {
+    font-size: 36px;
+    margin-top: 35px;
+    margin-bottom: 50px;
+    text-align: center;
+    width: 100%;
+}
+
+/* Estilos para o contêiner do carrossel */
+.carousel-container-n {
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    max-width: 78%;
+    margin-left: 175px;
+    margin-bottom: 30px;
 }
 
 .news-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 50px;
-    padding: 50px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: calc(300px * 10); /* Ajusta conforme o número total de notícias */
 }
 
 .news-item {
+    min-width: 350px;
+    margin: 0 27px;
     box-shadow: 0 0 10px var(--sombra);
     overflow: hidden;
     transition: transform 0.3s ease-in-out;
@@ -341,15 +361,8 @@ header {
 
 .news-item img {
     width: 100%;
-    height: 200px; /* Definindo uma altura fixa para as imagens */
-    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorção */
-}
-
-.section-title {
-    font-size: 36px;
-    margin-top: 50px;
-    text-align: center;
-    width: 100%;
+    height: 200px;
+    object-fit: cover;
 }
 
 .news-item h3 {
@@ -375,17 +388,34 @@ header {
     display: inline-block;
     font-size: 16px;
     border-radius: 5px;
-    transition: background-color 0.3s ease; /* Animação de transição suave */
+    transition: background-color 0.3s ease;
 }
 
 .news-item a:hover {
     background-color: var(--hover-botoes);
-    color: var(--letras-brancas);
 }
 
-.news-item:hover {
-    transform: translateY(-5px);
+.carousel-nav {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0 10px;
+    color: #333;
+    z-index: 1; /* Garante que as setas fiquem acima dos itens do carrossel */
 }
+
+.prev {
+    left: 10px; /* Ajusta a posição para que fique mais visível */
+}
+
+.next {
+    right: 10px; /* Ajusta a posição para que fique mais visível */
+}
+
 
 /* PORTFOLIO MADE WITH LOVE */
 
@@ -404,7 +434,7 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color:#98cad1f3;
+    background-color:#a2e0fd;
 }
 
 .portfolio-content {
@@ -422,9 +452,32 @@ header {
 
 .section-description1 {
     text-align: center;
-    margin: 20px 300px 40px 300px; /* Define as margens em ordem: topo, direita, base, esquerda */
+    margin: 20px 400px 40px 400px; /* Define as margens em ordem: topo, direita, base, esquerda */
     color: var(--letras-brancas);
 }
+
+.filter-buttons {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.filter-button {
+    background-color: var(--botao-portfolio);
+    color: #000000;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.filter-button.active,
+.filter-button:hover {
+    background-color: var(--subtitulos); /* Fundo dos botões*/
+}
+
+/* Novo CSS para organizar as imagens em duas divs grandes */
 
 .portfolio-container {
     display: flex;
@@ -434,45 +487,37 @@ header {
     margin: 0 auto;
 }
 
-/* CAROUSEL */
+.large-image {
+    flex: 1; /* Ajusta a proporção para que a imagem grande ocupe mais espaço */
+    max-width: 100%;
+}
 
-.carousel {
-    position: relative;
-    width: 50vw; /* Largura total da tela */
-    height: 60vh; /* Altura menor */
-    max-width: none;
-    margin: 0 auto;
+.large-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover; /* Ajusta a imagem para cobrir o contêiner sem distorção */
+    transition: transform 0.3s ease;
+}
+
+.small-images {
+    flex: 1; /* Ajusta a proporção para que as imagens pequenas ocupem o restante do espaço */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas para as imagens pequenas */
+    gap: 10px;
+}
+
+.small-images .portfolio-item {
     overflow: hidden;
 }
-.carousel-images {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
 
-.carousel-images img {
+.small-images .portfolio-item img {
     width: 100%;
-    min-width: 100%; /* Garante que cada imagem ocupe 100% da largura da área visível */
+    height: 100%; /* Garante que a imagem preencha o contêiner */
+    object-fit: cover; /* Ajusta a imagem para cobrir o contêiner sem distorção */
+    display: block;
 }
 
-.carousel-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: #00000080;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    z-index: 10;
-}
-
-.carousel-button.prev {
-    left: 10px;
-}
-
-.carousel-button.next {
-    right: 10px;
-}
 
 
 /* CUSTOMER REVIEWS */
@@ -520,6 +565,7 @@ header {
     flex-direction: column;
     align-items: center;
     max-width: 300px;
+    background-color: white;
 }
 
 .speech-bubble {
