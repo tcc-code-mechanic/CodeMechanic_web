@@ -15,7 +15,7 @@
 
     /* LETRAS */
     --letras-brancas: #ffffff;
-    --letras-escuras: #666;
+    --letras-escuras: #4d4d4d;
     --subtitulos: #333;
     --letra-cor: #00ebd7;
     --letras-rodape: #ccc;
@@ -193,7 +193,7 @@ header {
 }
 
 .welcome-content p {
-    font-size: 16px;
+    font-size: 19px;
     color: var(--letras-escuras);
     margin-bottom: 20px;
 }
@@ -259,7 +259,7 @@ header {
 }
 
 .why-choose-us p {
-    font-size: 16px; /* Tamanho da fonte do parágrafo */
+    font-size: 19px; /* Tamanho da fonte do parágrafo */
     margin-bottom: 40px; /* Espaçamento inferior do parágrafo */
     color: var(--letras-escuras); /* Cor do texto do parágrafo */
 }
@@ -309,12 +309,12 @@ header {
 }
 
 .why-choose-us .feature-item h3 {
-    font-size: 22px; /* Tamanho da fonte do título do item */
+    font-size: 23px; /* Tamanho da fonte do título do item */
     margin-bottom: 10px; /* Espaçamento inferior do título do item */
 }
 
 .why-choose-us .feature-item p {
-    font-size: 16px; /* Tamanho da fonte do parágrafo do item */
+    font-size: 19px; /* Tamanho da fonte do parágrafo do item */
     color: var(--letras-escuras); /* Cor do texto do parágrafo do item */
 }
 
@@ -357,6 +357,7 @@ header {
     overflow: hidden;
     transition: transform 0.3s ease-in-out;
     text-align: center;
+    border-bottom: 1px solid var(--sombra); /* Adiciona uma borda inferior */
 }
 
 .news-item img {
@@ -371,7 +372,7 @@ header {
 }
 
 .news-item p {
-    font-size: 14px;
+    font-size: 16px;
     color: var(--letras-escuras);
     padding: 0 15px;
     text-align: justify;
@@ -551,6 +552,7 @@ header {
     text-align: center;
     margin: 20px 400px 40px 400px; /* Define as margens em ordem: topo, direita, base, esquerda */
     color: var(--letras-escuras);
+    font-size: 19px;
 }
 
 .review-container {
@@ -575,6 +577,7 @@ header {
     margin-bottom: 20px;
     border: 1px solid var(--fundo-why-choose-us);
     box-shadow: 0px 0px 10px var(--sombra);
+    font-size: 18px;
 }
 
 .speech-bubble::after {
@@ -633,7 +636,7 @@ header {
 }
 
 .map-content p {
-    font-size: 18px;
+    font-size: 19px;
     color: var(--letras-escuras);
     margin-bottom: 40px;
 }
